@@ -1,0 +1,168 @@
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+/* CSS Reset */
+
+/* Variables */
+:root {
+  /* Colors */
+  --blue: #13183f;
+  --pink: #f74780;
+  --grey: #83869a;
+  --white: #fff;
+
+  /* Color Gradients */
+  --gradient-pink: linear-gradient(to top, #f02aa6, #ff6f48);
+  --gradient-purple: linear-gradient(to bottom, #4851ff, #f02aa6);
+
+  /* Font Sizes*/
+  --fs-xxl: 3.5rem;
+  --fs-xl: 2.5rem;
+  --fs-l: 2rem;
+  --fs-m: 1.5rem;
+  --fs-s: 1.125rem;
+  --fs-xs: 1rem;
+
+  /* Font Weights */
+  --fw-xl: 800;
+  --fw-l: 700;
+  --fw-m: 500;
+
+  /* Line Heights */
+  --lh-l: 150%;
+  --lh-m: 120%;
+}
+
+/* Utility Classes */
+/* Colors */
+.white {
+    color: var(--white);
+}
+
+.bg-white {
+    color: var(--white);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.pink {
+    color: var(--pink);
+}
+
+/* Text Presets */
+.text-preset-1 {
+  font-size: var(--fs-xxl);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-m);
+}
+
+.text-preset-2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-m);
+}
+
+.text-preset-3 {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-m);
+}
+
+.text-preset-4 {
+  font-size: var(--fs-m);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-m);
+}
+
+.text-preset-5 {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-m);
+  line-height: var(--lh-l);
+}
+
+.text-preset-6 {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-l);
+  line-height: var(--lh-l);
+}
+
+.text-preset-7 {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-l);
+  line-height: var(--lh-l);
+}
+
+/* Body */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
