@@ -170,6 +170,11 @@ textarea:not([rows]) {
   line-height: var(--lh-l);
 }
 
+/* HTML */
+html {
+  overflow-x: hidden;
+}
+
 /* Body */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -252,7 +257,7 @@ footer nav {
   gap: 1.5rem;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 0 1.5rem #f0f2ff;
+  background-color: var(--white);
 }
 
 .course-box img {
@@ -264,4 +269,72 @@ footer nav {
 .course-box a {
   text-decoration: none;
   margin-top: auto;
+}
+
+/* Media Query */
+@media screen and (max-width: 69rem) {
+  /* Variables */
+  :root {
+    --fs-xxl: 2.5rem;
+    --fs-xl: 2rem;
+    --fs-l: 1.5rem;
+    --fs-m: 1.25rem;
+    --fs-xs: 0.875rem;
+  }
+
+  /* Body */
+  body::after {
+    top: -2.5rem;
+    right: -17rem;
+    width: 44rem;
+    height: 44rem;
+  }
+
+  /* Hero */
+  .hero p {
+    max-width: 21rem;
+  }
+
+  .hero-content {
+    padding-block: 2.5rem;
+  }
+
+  /* Courses */
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 47rem) {
+  /* Body */
+  body::after {
+    content: "";
+    position: absolute;
+    background: url(./images/image-hero-mobile@2x.png) no-repeat;
+    background-size: contain;
+    top: 30rem;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  /* Hero */
+  .hero {
+    padding-inline: 10vw;
+  }
+
+  .hero-content {
+    padding-block: 0 75vw;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  /* Courses */
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 5rem;
+  }
 }
