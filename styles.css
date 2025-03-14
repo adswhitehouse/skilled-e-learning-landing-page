@@ -96,27 +96,35 @@ textarea:not([rows]) {
 /* Utility Classes */
 /* Colors */
 .white {
-    color: var(--white);
-}
-
-.bg-white {
-    color: var(--white);
+  color: var(--white);
 }
 
 .blue {
-    color: var(--blue);
-}
-
-.bg-blue {
-    background-color: var(--blue);
+  color: var(--blue);
 }
 
 .grey {
-    color: var(--grey);
+  color: var(--grey);
 }
 
 .pink {
-    color: var(--pink);
+  color: var(--pink);
+}
+
+.bg-white {
+  color: var(--white);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.gradient-pink {
+  background: var(--gradient-pink);
+}
+
+.gradient-purple {
+  background: var(--gradient-purple);
 }
 
 /* Text Presets */
@@ -165,4 +173,95 @@ textarea:not([rows]) {
 /* Body */
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background: url(./images/image-hero-desktop.png) no-repeat;
+  background-size: contain;
+  top: -8.5rem;
+  right: -21rem;
+  width: 62rem;
+  height: 62rem;
+  z-index: -1;
+}
+
+/* Anchor styling */
+.main-link {
+  display: inline-flex;
+  height: 2.5rem;
+  width: 9rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10rem;
+}
+
+a {
+  transition: opacity 0.25s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+/* Header/Footer */
+header,
+footer {
+  padding: 1.5rem 10vw;
+}
+
+header nav,
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 10vw;
+}
+
+.hero-content {
+  padding-block: 7rem;
+}
+
+.hero p {
+  margin-block: 1.5rem;
+  width: 29rem;
+}
+
+/* Courses */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5.75rem 10vw 9rem;
+  gap: 5.25rem 2rem;
+  background: linear-gradient(to top, #f0f2ff, #fff);
+}
+
+.course-box {
+  padding: 4rem 2rem 2.5rem;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 1.5rem #f0f2ff;
+}
+
+.course-box img {
+  width: 3.5rem;
+  position: absolute;
+  top: -1.75rem;
+}
+
+.course-box a {
+  text-decoration: none;
+  margin-top: auto;
 }
